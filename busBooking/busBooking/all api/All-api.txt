@@ -1,0 +1,68 @@
+
+  ===Add Bus===
+Url: post:http://localhost:8080/bus/api/add-bus/1 
+
+
+add-bus api----
+{
+    "id": 3,
+    "busNo": "B1234",
+    "capacity": 40,
+    "type": "SLEEPER_AC",
+    "source":"Rangpur jila",
+    "destination":"Dhaka",
+    "arrivalDate": "10:30:00",
+    "destinationDate": "18:30:00",
+    "price": 800.0,  
+    "date":"2024-12-05"
+}
+
+====getRouteById===
+Url=  Get:http://localhost:8080/bus/api/routes/1
+
+===Add Routes Api====
+Url= Post:http://localhost:8080/bus/api/add-routes
+
+api------
+
+{
+    "id": 1,
+        "source": "Kalabagan",
+        "sourceState": "DHAKA",
+        "destination": "Bagerhat",
+        "destinationState": "KHULNA"   
+}
+
+====getBusById====
+
+Url=Get:http://localhost:8080/bus/api/bus/2
+
+=====Delete Bus======
+Url=delete:http://localhost:8080/bus/api/delete-bus/2
+
+====Tickets Booking=====
+Url=Post:http://localhost:8080/customer/api/book/3/5001
+--------api------
+{
+    "ownerName": "Suzon Sha...",
+    "fare": 850.0,
+    "noOfSeats": 2,
+    "paymentMode": "CASH"
+}
+========Search bus api========
+
+Url=Get:http://localhost:8080/customer/api/search-bus?source=Dhaka&destination=Chittagong&arriveDate=2024-12-01
+
+=========Cancel Tickets=====================
+Url=put/delete: http://localhost:8080/customer/api/cancel/103
+
+=============view Seats ======================
+Url= Get: http://localhost:8080/customer/api/viewSeats/1?date=2024-12-08
+
+
+=============book seats=================
+Url= Post: http://localhost:8080/customer/api/book-seats?busId=1&date=2024-12-09&noOfSeats=5
+
+
+=============Add seats=================
+Url= Post: http://localhost:8080/customer/api/add-seats?busId=1&date=2024-12-09&noOfSeats=5
